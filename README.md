@@ -64,7 +64,7 @@ sudo apt-get install -y \
 ### OMNeT++ and SUMO Downloads
 
 | Framework | Version | Official Link | 
-|-----------|---------|---------------|-----------|
+|-----------|---------|---------------|
 | **OMNeT++** | 5.7.1 | [OMNeT++ Website](https://omnetpp.org/download) | 
 | **SUMO** | 1.18.0 | [SUMO Repository](https://github.com/eclipse/sumo) |
 
