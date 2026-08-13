@@ -3,6 +3,26 @@ Master Thesis work for Autonomous Driving, Hochschule Coburg 2026
 
 Created by Ritwik Ranjit
 
+## V2X Communication over Non-Terrestrial Network (NTN) Satellites
+
+**Evaluation of Vehicle-to-Everything (V2X) Messages over Non-Terrestrial Network Satellites in Remote Areas Lacking Terrestrial Network Coverage**
+*M.E. Autonomous Driving, Hochschule Coburg — in collaboration with Valeo*
+
+### Overview
+This thesis investigates how V2X communication can be maintained in regions where terrestrial network (TN) infrastructure is unavailable, by routing V2X messages through satellite-based Non-Terrestrial Networks (NTN). It combines vehicular network simulation with a link-budget-driven satellite communication model to evaluate whether NTN can realistically support connected-vehicle use cases in coverage gaps.
+
+### Methodology
+- Built a simulation and evaluation framework in **OMNeT++**, integrating **SUMO** (traffic mobility), **Veins** and **INET** (vehicular networking), and **Space_Veins** (satellite-vehicle link modeling).
+- Modeled the satellite link using a full **radio link budget**: transmit power (EIRP), antenna gain, free-space path loss (FSPL), and an **SNIR-threshold-based reception model** to determine whether a transmitted packet is successfully decoded.
+- Simulated **APSK-modulated** satellite-to-vehicle links across three orbital regimes — **LEO, MEO, and GEO**.
+- Derived realistic satellite geometry using **TLE/SGP4 orbit propagation**, computing Doppler shift, slant range, and elevation-angle-constrained visibility for each link.
+- Implemented a **link-budget-driven handover mechanism** for LEO constellations, evaluating trade-offs between satellite visibility, elevation constraints, and link quality.
+- Ran **28 simulated link configurations** across the three orbital regimes to compare communication performance.
+
+LEO constellations offer the best latency and reliability trade-off for delay-sensitive V2X applications, while GEO's higher path loss and propagation delay make it more suitable only for delay-tolerant messaging.
+
+### Tech Stack
+`OMNeT++` · `INET` · `SUMO` · `Veins` · `Space_Veins` · `TLE/SGP4` · `C++` · `Python`
 
 # 🛰️ Satellite-Vehicle Communication Simulation Setup & Run Guide
 
